@@ -1,0 +1,17 @@
+//runs in the Mongo Terminal and creates the necessary collections
+conn = new Mongo();
+db = conn.getDB("SS");
+
+
+db.createCollection( "login",
+   {
+      validator: { $or:
+		[
+            { username: { $type: "string" } },
+            { password: { $type: "string" } },
+		
+            }
+         ]
+      }
+   }
+)

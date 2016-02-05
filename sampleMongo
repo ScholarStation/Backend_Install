@@ -1,4 +1,4 @@
-//Will make sample profiles, username and password
+//Will make sample profile, username and password
 conn = new Mongo();
 db = conn.getDB("SS");
 var a  = {
@@ -11,7 +11,7 @@ var a  = {
 	"major":"SE",
 	"username":"qwex"
 };
-db.profiles.save(a);
+db.profile.save(a);
 var a  = {
 	"fname":"Branden",
 	"lname":"Poe",
@@ -20,9 +20,9 @@ var a  = {
 	"email":"bmp18@students.uwf.edu",
 	"year":"senior",
 	"major":"SE",
-	"username":"pleb"
+	"username":"scarecr0w"
 };
-db.profiles.save(a);
+db.profile.save(a);
 var a  = {
 	"fname":"Jonathan",
 	"lname":"Rogers",
@@ -33,7 +33,7 @@ var a  = {
 	"major":"SE",
 	"username":"oldage"
 };
-db.profiles.save(a);
+db.profile.save(a);
 var a = {
 	"fname":"Jason",
 	"lname":"Monforton",
@@ -44,7 +44,7 @@ var a = {
 	"major":"CIS",
 	"username":"jasonea"
 };
-db.profiles.save(a);
+db.profile.save(a);
 var a = {
 	"fname":"Michael",
 	"lname":"Caine",
@@ -55,7 +55,7 @@ var a = {
 	"major":"SE",
 	"username":"hamhock"
 };
-db.profiles.save(a);
+db.profile.save(a);
 var b = {
 	"username":"qwex",
 	"password":"pass1234"
