@@ -5,7 +5,7 @@ var a  = {
 	"fname":"Ben",
 	"lname":"Churchill",
 	"age":21,
-	"gender":"foxspirit",
+	"gender":"whitehorse",
 	"email":"bjc37@students.uwf.edu",
 	"year":"senior",
 	"major":"SE",
@@ -16,7 +16,7 @@ var a  = {
 	"fname":"Branden",
 	"lname":"Poe",
 	"age":22,
-	"gender":"whitehorse",
+	"gender":"foxspirit",
 	"email":"bmp18@students.uwf.edu",
 	"year":"senior",
 	"major":"SE",
@@ -59,5 +59,25 @@ db.profile.save(a);
 var b = {
 	"username":"qwex",
 	"password":"pass1234"
+};
+db.login.save(b);
+var b = {
+	"username":"scaresc0w",
+	"password":"password"
+};
+db.login.save(b);
+var b = {
+	"username":"jasonea",
+	"password":"mongo"
+};
+db.login.save(b);
+var b = {
+	"username":"hancock",
+	"password":"h4ckm3"
+};
+db.login.save(b);
+var b = {
+	"username":"oldage",
+	"password":"password"
 };
 db.login.save(b);
