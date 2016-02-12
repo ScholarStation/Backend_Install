@@ -1,0 +1,8 @@
+echo " Scholar Station is now installing"
+
+
+rm -rf ScholarStation
+git clone https://github.com/qWeX23/ScholarStation.git
+npm install mongodb
+cd ScholarStation/bin
+node www
