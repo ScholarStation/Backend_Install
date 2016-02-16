@@ -54,3 +54,18 @@ db.createCollection( "profile",
 	  validationAction: "error"
    }
 )
+db.createCollection("study",
+	{
+		validator: { $or:
+		[
+			{ owner:{$type: "string"}},
+			{ members:{$type: "string"}},
+			{ time:{$type: "string"}},
+			{ topic:{$type: "string"}},
+			{ class:{$type: "string"}}
+		]
+	  },
+	  validationLevel: "strict",
+	  validationAction: "error"
+	}
+)
