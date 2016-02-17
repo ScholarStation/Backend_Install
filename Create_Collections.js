@@ -5,7 +5,7 @@ db = conn.getDB("SS");
 
 db.createCollection( "login",
    {
-      validator: { $or:
+      validator: { $and:
 		[
             { username: { $type: "string" } },
             { password: { $type: "string" } }
@@ -20,7 +20,7 @@ db.createCollection( "login",
 
 db.createCollection( "uniquekey",
    {
-      validator: { $or:
+      validator: { $and:
 		[
             { username: { $type: "string" } },
             { KEY: { $type: "string" } }
@@ -36,7 +36,7 @@ db.createCollection( "uniquekey",
 
 db.createCollection( "profile",
    {
-      validator: { $or:
+      validator: { $and:
 		[
             { fname:{$type: "string"}},
 			{ lname:{$type: "string"}},
@@ -53,4 +53,20 @@ db.createCollection( "profile",
 	  validationLevel: "strict",
 	  validationAction: "error"
    }
+)
+db.createCollection("study",
+	{
+		validator: { $and:
+		[
+			{ owner:{$type: "string"}},
+			{ members:{$type: "string"}},
+			{ time:{$type: "string"}},
+			{date:{$type: "string"}},
+			{ topic:{$type: "string"}},
+			{ class:{$type: "string"}}
+		]
+	  },
+	  validationLevel: "strict",
+	  validationAction: "error"
+	}
 )
