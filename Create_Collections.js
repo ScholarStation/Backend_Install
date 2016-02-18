@@ -40,7 +40,7 @@ db.createCollection( "profile",
 		[
             { fname:{$type: "string"}},
 			{ lname:{$type: "string"}},
-			{ age:{$type: "string"}},
+			{ age:{$type: "int"}},
 			{ gender:{$type: "string"}},
 			{ email:{$type: "string"}},
 			{ year:{$type: "string"}},
@@ -58,12 +58,14 @@ db.createCollection("study",
 	{
 		validator: { $and:
 		[
+			{ course:{$type: "string"}},
 			{ owner:{$type: "string"}},
 			{ members:{$type: "string"}},
 			{ time:{$type: "string"}},
-			{date:{$type: "string"}},
+			{ date:{$type: "string"}},
+			{ time:{$type: "string"}},
 			{ topic:{$type: "string"}},
-			{ class:{$type: "string"}}
+			{ course:{$type: "string"}}
 		]
 	  },
 	  validationLevel: "strict",
