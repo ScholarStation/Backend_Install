@@ -53,4 +53,22 @@ req.add_header('Content-Type', 'application/json')
 response = urllib2.urlopen(req, json.dumps(data))
 data = json.load(response)
 print data
+print '******\n\n\n******'
+
+
+print "retreiving the study group!"
+data = {
+       'username': 'qwex',
+	   'KEY':KEY,
+}
+req = urllib2.Request('http://localhost:3000/StudyUtility/GetStudyGroupsByMember')
+req.add_header('Content-Type', 'application/json')
+response = urllib2.urlopen(req, json.dumps(data))
+data = json.load(response)
+print data
+print '******\n\n\n******'
+
+
+
+
 print "ok done"
