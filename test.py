@@ -143,6 +143,26 @@ print data
 print '******\n\n\n******'
 
 
+print"editing a study group"
+data = {
+		'_id':deleteID,
+       'username': 'qwex',
+	   'KEY':KEY,
+	   'course':'AAAA',
+	   'owner':'qwex',
+	   'topic':'AAAAA',
+	   'date':'2aaa',
+	   'time':'5aaaaaaa',
+	   'members':['jasonea','sGArBAGE DATA','oWEEEEEEe']
+}
+req = urllib2.Request('http://localhost:3000/StudyUtility/Create')
+req.add_header('Content-Type', 'application/json')
+response = urllib2.urlopen(req, json.dumps(data))
+data = json.load(response)
+print data
+print '******\n\n\n******'
+
+
 print "deleting a study group with ID:" + deleteID
 data = {
 	'username': 'qwex',
