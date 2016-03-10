@@ -155,7 +155,7 @@ data = {
 	   'time':'5aaaaaaa',
 	   'members':['jasonea','sGArBAGE DATA','oWEEEEEEe']
 }
-req = urllib2.Request('http://localhost:3000/StudyUtility/Create')
+req = urllib2.Request('http://localhost:3000/StudyUtility/EditByID')
 req.add_header('Content-Type', 'application/json')
 response = urllib2.urlopen(req, json.dumps(data))
 data = json.load(response)
