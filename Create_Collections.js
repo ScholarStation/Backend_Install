@@ -8,7 +8,8 @@ db.createCollection( "login",
       validator: { $and:
 		[
             { username: { $type: "string" } },
-            { password: { $type: "string" } }
+            { password: { $type: "string" } },
+			{permissionLevel: {$type: "string"}}
 		
             
          ]
@@ -23,8 +24,11 @@ db.createCollection( "uniquekey",
       validator: { $and:
 		[
             { username: { $type: "string" } },
-            { KEY: { $type: "string" } }
-		
+            { KEY: { $type: "string" } },
+			{permissionLevel: {$type: "string"}},
+			{expiration: {$type: "string"}}
+				
+			
             
          ]
       },
