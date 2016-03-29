@@ -76,3 +76,15 @@ db.createCollection("study",
 	  validationAction: "error"
 	}
 )
+
+db.createCollection("courseList",
+	{
+		validator: { $and:
+		[
+			{ courseName:{$type: "string"}}
+		]
+	  },
+	  validationLevel: "strict",
+	  validationAction: "error"
+	}
+)
