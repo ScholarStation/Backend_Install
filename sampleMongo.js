@@ -81,3 +81,13 @@ var b = {
 	"password":"password"
 };
 db.login.save(b);
+ var b = {
+	"course":"COURSENAME",
+	"owner":"OWNERNAME",
+	"topic":"TOPIC OF GROUP",
+	"date":"DATE ",
+	"time":"THIS IS Time",
+	"members:["MEMEBER1","member2"],
+	"publicView":true	 
+ };
+ db.study.save(b);

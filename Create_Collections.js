@@ -69,7 +69,9 @@ db.createCollection("study",
 			{ date:{$type: "string"}},
 			{ time:{$type: "string"}},
 			{ topic:{$type: "string"}},
-			{ course:{$type: "string"}}
+			{ course:{$type: "string"}},
+			{ publicView:{$type: "boolean"}}
+				
 		]
 	  },
 	  validationLevel: "strict",
