@@ -10,7 +10,7 @@ data = {
 }
 print "trying incorrect login"
 #HTTP Request
-req = urllib2.Request('http://localhost:3000/LoginApp')
+req = urllib2.Request('http://localhost:3000/LoginUtility')
 req.add_header('Content-Type', 'application/json')
 response = urllib2.urlopen(req, json.dumps(data))
 data = json.load(response)
@@ -24,7 +24,7 @@ data = {
 }
 print "trying correct login"
 #HTTP Request
-req = urllib2.Request('http://localhost:3000/LoginApp')
+req = urllib2.Request('http://localhost:3000/LoginUtility')
 req.add_header('Content-Type', 'application/json')
 response = urllib2.urlopen(req, json.dumps(data))
 data = json.load(response)
@@ -36,7 +36,7 @@ print '******\n\n\n******'
 #using the response, retreive the profile
 print "attempting profile retrevial"
 #HTTP Request
-req = urllib2.Request('http://localhost:3000/ProfileApp')
+req = urllib2.Request('http://localhost:3000/ProfileUtility')
 req.add_header('Content-Type', 'application/json')
 response = urllib2.urlopen(req, json.dumps(data))
 data = json.load(response)
@@ -99,7 +99,7 @@ data = {
        'username': 'jasonea',
 	   'password' : 'mongo',
 }
-req = urllib2.Request('http://localhost:3000/LoginApp')
+req = urllib2.Request('http://localhost:3000/LoginUtility')
 req.add_header('Content-Type', 'application/json')
 response = urllib2.urlopen(req, json.dumps(data))
 data = json.load(response)
